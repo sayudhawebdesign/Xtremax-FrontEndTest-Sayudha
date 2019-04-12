@@ -1,0 +1,268 @@
+.map {
+    display: grid;
+    grid-template-columns: 15rem 35rem 142rem;
+
+    // NAVIGATION
+    &__nav {
+        height: 100rem;
+        background-color: $bgnav;
+
+        &--browse,
+        &--attract,
+        &--videos,
+        &--blog,
+        &--about {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            width: 15rem;
+            height: 12.5rem;
+
+            &-icon {
+                align-self: center;
+                justify-self: center;
+
+                &:first-child {
+                    padding-top: 3.5rem;
+                }
+            }
+
+            &-title {
+                justify-self: center;
+                font-size: 1.3rem;
+                color: #fff;
+                text-transform: capitalize;
+                text-align: center;
+            }
+        }
+
+        &--browse:not(:last-child) {
+            background-color: #72CDD2;
+        }
+    }
+
+    // END OF NAVIGATION
+
+    // SUBNAVIGATION
+    &__subnav {
+        display: flex;
+        flex-direction: column;
+        width: 35rem;
+        background-color: $bgsubnav;
+        align-items: center;
+
+        // filter box 
+        &--filter {
+            height: 12.5rem;
+            border-bottom: 1px solid rgb(32, 32, 32);
+
+            &-text {
+                display: inline-block;
+                height: 4.1rem;
+                width: 30.1rem;
+                border: none;
+                background-color: rgb(55, 60, 75);
+                color: #A9ABAF;
+                font-size: 1.4rem;
+                text-transform: capitalize;
+                margin-top: 10%;
+                margin-left: 2.1rem;
+            }
+
+            &-drop {
+                display: inline-block;
+                height: 3rem;
+                border: none;
+                background-color: rgb(55, 60, 75);
+                fill: #A9ABAF;
+                transform: translateX(-2.5rem);
+            }
+        }
+
+        // end of filter box
+
+        &--title {
+            height: 6rem;
+            margin-top: 2rem;
+            border-bottom: 1px solid rgb(55, 60, 75);
+
+            //container untuk menu marina by sands (plain style, no check box hack, no dropdown effect, just slicing from image to save time)
+            &-menuexample {
+                height: 18rem;
+                border-bottom: 1px solid rgb(55, 60, 75);
+            }
+
+            // // style untuk head button "Merlion"
+            // &-head {
+            //     height: 4.1rem;
+            //     width: 30.1rem;
+            //     border: none;
+            //     // background-color: #1C1F27;
+            //     background-color: #282C37;
+
+            //     //style untuk text h2 "Merlion
+            //     &-text {
+            //         font-size: 2rem;
+            //         // color: #92D72E;
+            //         color: #fff;
+            //         margin-left: 3rem;
+            //         text-transform: capitalize;
+            //         text-align: left;
+            //     }
+
+            // }
+
+            //style untuk semua title di subnav
+            &-heading0,
+            &-heading1,
+            &-heading2,
+            &-heading3,
+            &-heading4,
+            &-heading5,
+            &-heading6,
+            &-heading7,
+            &-heading8 {
+                color: #fff;
+                margin-left: 3rem;
+                font-size: 1.5rem;
+                text-transform: capitalize;
+                text-align: left;
+            }
+
+            &-btn0,
+            &-btn1,
+            &-btn2,
+            &-btn3,
+            &-btn4,
+            &-btn5,
+            &-btn6,
+            &-btn7,
+            &-btn8 {
+                height: 4.1rem;
+                width: 30.1rem;
+                border: none;
+                background-color: $bgsubnav;
+            }
+
+            &-drop {
+                display: inline-block;
+                height: 3rem;
+                border: none;
+                background-color: $bgsubnav;
+                fill: #fff;
+                transform: translateX(-2.5rem);
+            }
+
+            &-list {
+                &-item {
+                    font-size: 1.4rem;
+                    color: #A9ABAF;
+                    padding: 1rem;
+                    margin-left: 7rem;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    // END OF SUBNAV
+
+    // MAP
+    &__pinpoint {
+        width: 142rem;
+        display: grid;
+        grid-template-rows: 12.5rem 1fr;
+
+        &--title {
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 3;
+
+            &-heading {
+                margin-left: 3rem;
+                font-size: 3rem;
+                text-transform: uppercase;
+            }
+
+            &-iconcontainer {
+                margin-right: 5rem;
+            }
+
+            &-icon {
+                fill: $bgsubnav;
+                padding: 1rem;
+            }
+        }
+
+        &--map {
+            position: relative;
+            height: 100%;
+            width: 141rem;
+        }
+    }
+
+    // END OF MAP
+    
+
+    // DESCRIPTION
+    &__desc {
+        display: grid;
+        grid-template-rows: 24rem 5rem 25rem 4rem 4rem;
+        width: 34.9rem;
+        height: 87.5rem;
+        background-color: $bgsubnav;
+        position: absolute;
+        top: 13.5%;
+        right: 0;
+        z-index: 3;
+        opacity: 0;
+
+        &--title {
+            background-color: #72CDD2;
+
+            &-text {
+                color: #fff;
+                padding-left: 2.1rem;
+                padding-top: .8rem;
+                text-transform: capitalize;
+            }
+        }
+
+        &--description {
+            &-text {
+                max-width: 28rem;
+                color: #fff;
+                padding-left: 2.1rem;
+                font-size: 1.3rem;
+                &:not(:last-child) {
+                    padding-top: 2rem;
+                }
+            }
+            
+        }
+
+        &--address,
+        &--website {
+            margin-left: 2.1rem;
+            margin-top: 3rem;
+            display: flex;
+            align-content: center;
+
+            &-icon {
+                display: inline;
+                fill: #fff;
+            }
+
+            &-text {
+                display: inline;
+                color: #fff;
+                font-size: 1.3rem;
+                margin-left: 1rem;
+            }
+        }
+
+
+    }
+}
