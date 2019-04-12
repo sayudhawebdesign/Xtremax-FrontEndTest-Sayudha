@@ -1,6 +1,9 @@
 # Xtremax-FrontEndTest-Sayudha
 Front End Test from PT. Xtremax
-
+------------------------------------------------------------------------------
+NOTE (IMPORTANT) : Folder node_modules tidak saya sertakan karena terlalu banyak. Jika ingin tes file SASS bisa langsung lakukan perintah
+"npm install" (tanpa tanda kutip), karena file package.JSON tidak saya rubah
+------------------------------------------------------------------------------
 SPESIFIKASI TES
 1. Buat JSON untuk map data :  --------- (DONE)
     - Latitude
